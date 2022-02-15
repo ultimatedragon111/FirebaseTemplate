@@ -37,6 +37,8 @@ public class RegisterFragment extends AppFragment {
                             binding.passwordEditText.getText().toString()
                     ).addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
+                            // upload photo i obtinc url de descarrega
+                            //    successs: actualizte e perfil de l'usuari amb el nom i la foto
                             navController.navigate(R.id.action_registerFragment_to_postsHomeFragment);
                         } else {
                             Toast.makeText(requireContext(), task.getException().getLocalizedMessage(),
